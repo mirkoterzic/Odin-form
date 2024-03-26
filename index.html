@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+
     <title>Odin Form</title>
   </head>
   <body>
@@ -12,6 +12,22 @@
       <div class="block">
         <img src="odin-lined.png" alt="odin" class="icon" />
         ODIN
+      </div>
+      <div class="image-footer gentrify">
+        Photo by
+        <a
+          href="https://unsplash.com/@haliewestphoto"
+          target="_blank"
+          class="gentrify"
+          >Halie West</a
+        >
+        on
+        <a
+          href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+          target="_blank"
+          class="gentrify"
+          >Unsplash</a
+        >
       </div>
     </div>
     <div class="right">
@@ -27,12 +43,11 @@
         </div>
         <div class="form">
           <h2>Let's do this!</h2>
-          <form action="#" method="get">
+          <form id="myForm" action="#" method="get">
             <div class="form-row">
-            <form action="#" method="get">
               <div>
                 <label for="first-name">FIRST NAME</label>
-                <input type="text" id="first-name" />
+                <input type="text" id="first-name" required />
               </div>
               <div>
                 <label for="e-mail">EMAIL</label>
@@ -40,27 +55,42 @@
               </div>
               <div>
                 <label for="password">PASSWORD</label>
-                <input type="password" id="password" />
+                <input type="password" id="password" required />
               </div>
             </div>
             <div class="form-row">
               <div>
                 <label for="last-name">LAST NAME</label>
-                <input type="text" id="last-name" />
+                <input type="text" id="last-name" required />
               </div>
               <div>
                 <label for="phone-number">PHONE NUMBER</label>
-                <input type="number" id="phone-number" min="1" max="3" />
+                <input
+                  type="number"
+                  id="phone-number"
+                  pattern="(\d{5}([\-]\d{4})?)"
+                  title="example : 65251"
+                  placeholder="65251"
+                />
               </div>
               <div>
                 <label for="confirm-password">CONFIRM PASSWORD</label>
-                <input type="text" id="confirm-password" />
+                <input type="password" id="confirm-password" required />
               </div>
             </div>
           </form>
         </div>
-        <div class="form-end"></div>
+        <div class="form-end">
+          <button id="submit-button" type="submit">Create Account</button>
+          <p>
+            Already have an account?
+            <span class="nothing" onclick='alert("That link does nothing.")'
+              >Log in</span
+            >
+          </p>
+        </div>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

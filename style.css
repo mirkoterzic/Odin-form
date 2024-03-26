@@ -53,6 +53,17 @@ body {
 
   word-wrap: break-word;
 }
+.image-footer {
+  position: absolute;
+  bottom: 1vh;
+  font-size: 2vh;
+  width: 30vw;
+  text-align: center;
+  color: white;
+}
+.image-footer a {
+  color: white;
+}
 .text-above-form {
   color: black;
 }
@@ -63,6 +74,10 @@ form {
 }
 form label {
   margin-bottom: 1vh;
+}
+
+.form {
+  box-shadow: 0px 0px 10px #cccccc;
 }
 .form-row div {
   display: flex;
@@ -85,4 +100,31 @@ input:invalid {
 input:focus {
   border: 1px solid blue;
   box-shadow: 1px 2px 3px #cccccc;
+}
+#submit-button {
+  margin: 50px;
+  padding: 10px 40px;
+  border-radius: 8px;
+  color: white;
+  font-family: odinFont;
+  background-color: #586c48;
+  font-weight: bolder;
+}
+
+.form-end p {
+  margin-left: 50px;
+  font-weight: bold;
+}
+.nothing {
+  color: #586c48;
+}
+.error:focus,
+.error {
+  border: 1px solid #c40505;
+}
+.form-err {
+  margin: 0;
+  padding-bottom: 1vh;
+  color: #c40505;
+  font-size: 0.7rem;
 }
